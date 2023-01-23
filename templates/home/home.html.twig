@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title_page %}Home{% endblock %}
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <form class="col s12" action="/?c=home&a=addArticle" method="post">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Titre" id="article_title" type="text" class="validate" name="article_title">
+                    <label for="article_title">Titre de l'article</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Votre article..." id="article_content" type="text" class="validate" name="article_content">
+                    <label for="article_content">Contenu</label>
+                </div>
+            </div>
+
+            <input type="submit" class="btn waves-effect waves-light" name="submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

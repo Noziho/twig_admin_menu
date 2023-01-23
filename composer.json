@@ -1,0 +1,19 @@
+{
+    "name": "noziho/twig_admin_menu",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noziho",
+            "email": "noah.decroix3@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/error-handler": "^6.2",
+        "twig/twig": "^3.5",
+        "gabordemooij/redbean": "^5.7"
+    }
+}
