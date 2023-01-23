@@ -47,7 +47,7 @@ abstract class AbstractController
             self::$twigInstance = new Environment(self::$twigLoader, [
                 'debug' => true,
                 'strict_variables' => true,
-                'cache' => '../var/cache',
+                //'cache' => '../var/cache',
             ]);
 
             self::$twigInstance->addExtension(new DebugExtension());
