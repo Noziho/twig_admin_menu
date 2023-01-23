@@ -4,8 +4,9 @@
 
 
 <div class="container">
+    <h1>Ajoutez un article:</h1>
     <div class="row">
-        <form class="col s12" action="/?c=home&a=addArticle" method="post">
+        <form class="col s12" action="/?c=article&a=addArticle" method="post">
             <div class="row">
                 <div class="input-field col s6">
                     <input placeholder="Titre" id="article_title" type="text" class="validate" name="article_title">
@@ -15,7 +16,7 @@
 
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="Votre article..." id="article_content" type="text" class="validate" name="article_content">
+                    <textarea placeholder="Votre article..." id="article_content" type="text" class="validate materialize-textarea" name="article_content"></textarea>
                     <label for="article_content">Contenu</label>
                 </div>
             </div>

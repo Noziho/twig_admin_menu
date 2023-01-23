@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  font-size: 62.5%;\n}\n\nbody {\n  font-size: 1.4rem;\n}\n\n.nav-wrapper {\n  background: black;\n}", "",{"version":3,"sources":["webpack://./assets/styles/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,iBAAA;AACF","sourcesContent":["html {\n  font-size: 62.5%;\n}\n\nbody {\n  font-size: 1.4rem;\n}\n\n.nav-wrapper {\n  background: black;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  font-size: 62.5%;\n}\n\nbody {\n  font-size: 1.4rem;\n}\n\n.nav-wrapper {\n  background: black;\n}\n\n.material-icons {\n  font-size: 4rem;\n  color: black;\n}\n\n.container {\n  display: flex;\n  flex-flow: row wrap;\n}\n.container div {\n  width: 100%;\n}", "",{"version":3,"sources":["webpack://./assets/styles/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,eAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,mBAAA;AACF;AAEE;EACE,WAAA;AAAJ","sourcesContent":["html {\n  font-size: 62.5%;\n}\n\nbody {\n  font-size: 1.4rem;\n}\n\n.nav-wrapper {\n  background: black;\n}\n\n.material-icons {\n  font-size: 4rem;\n  color: black;\n}\n\n.container {\n  display: flex;\n  flex-flow: row wrap;\n\n\n  div {\n    width: 100%;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -718,14 +718,6 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.sidenav');
     let instances = M.Sidenav.init(elems, 'edge');
-});
-
-
-
-// Or with jQuery
-
-$(document).ready(function(){
-    $('.sidenav').sidenav();
 });
 })();
 
