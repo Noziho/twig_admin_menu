@@ -66,4 +66,39 @@ class ArticleController extends AbstractController
         }
 
     }
+
+    /**
+     * @throws SQL
+     */
+    public static function edit (int $id = null)
+    {
+        if (null === $id) {
+            header("Location: /?c=home");
+            exit();
+        }
+
+        if (isset($_POST['submit'])) {
+            $article = R::findOne('article', 'id=?', [$id]);
+
+            if ($article) {
+                $article->article_title = filter_var($_POST['article_title'], FILTER_SANITIZE_STRING);
+                $article->article_content = filter_var($_POST['article_content'], FILTER_SANITIZE_STRING);
+                R::store($article);
+                header("Location: /?c=article");
+            }
+            else {
+                header("Location: /?c=article");
+            }
+        }
+        else {
+            $article = R::findOne('article', 'id=?', [$id]);
+
+            if ($article) {
+                self::render('articles/editArticle.html.twig', [
+                    'article' => $article
+                ]);
+                exit();
+            }
+        }
+    }
 }

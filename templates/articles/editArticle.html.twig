@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title_page %}Edition d'article{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Mofidier un article:</h1>
+        <div class="row">
+            <form class="col s12" action="/?c=article&a=edit&id={{ article.id }}" method="post">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Titre" id="article_title" type="text" class="validate" name="article_title" value="{{ article.article_title }}">
+                        <label for="article_title">Titre de l'article</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                    <textarea placeholder="Votre article..." id="article_content" type="text" class="validate materialize-textarea" name="article_content">{{ article.article_content }}</textarea>
+                        <label for="article_content">Contenu</label>
+                    </div>
+                </div>
+
+                <input type="submit" class="btn waves-effect waves-light" name="submit">
+            </form>
+        </div>
+    </div>
+{% endblock %}

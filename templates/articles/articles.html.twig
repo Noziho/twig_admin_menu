@@ -9,11 +9,11 @@
                     <div class="col s12 m6">
                         <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">{{ article.article_title }}</span>
-                                <p>{{ article.article_content }}</p>
+                                <span class="card-title">{{ article.article_title | e }}</span>
+                                <p>{{ article.article_content | e}}</p>
                             </div>
                             <div class="card-action">
-                                <a href="/?c=article&a=edit&id={{ article.id }}">Editer</a>
+                                <a href="/?c=article&a=edit&id={{ article.id }}" id="edit">Editer</a>
                                 <a href="/?c=article&a=delete&id={{ article.id }}">Supprimer</a>
                             </div>
                         </div>
